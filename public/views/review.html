@@ -1,0 +1,36 @@
+<div class="row">
+  <div class="col-sm-1"></div>
+  <div class="col-sm-10">
+    <div class="product-heading">Create Review</div>
+    <form class="form-horizontal" role="form">
+      <legend ng-model="productName">{{productName}}</legend>
+      <div class="form-group">
+        <label for="email" class="col-sm-2 control-label">Email</label>
+        <div class="col-sm-6">
+          <input class="form-control" id="email" placeholder="Email" ng-model="reviewData.email">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="rating" class="col-sm-2 control-label">Rating</label>
+        <div class="col-sm-6">
+          <input class="form-control" id="rating" placeholder="Rating from 0 to 10" ng-model="reviewData.rating">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="comment" class="col-sm-2 control-label">Comment</label>
+        <div class="col-sm-6">
+          <textarea class="form-control" id="comment" placeholder="Comment" ng-model="reviewData.comment"></textarea>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="submit" class="btn btn-success" ng-click="saveReview()">Save</button>
+        </div>
+      </div>
+      <p class="error" ng-show="emailRequired">{{emailRequired}}</p>
+      <p class="error" ng-show="ratingRequired">{{ratingRequired}}</p>
+      <p class="error" ng-show="commentRequired">{{commentRequired}}</p>
+    </form>
+  </div>
+  <div class="col-sm-1"></div>
+</div>

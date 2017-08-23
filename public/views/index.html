@@ -1,0 +1,41 @@
+<!doctype html>
+<html ng-app="myApp">
+<head>
+  <!-- META -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Product Listing App</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link href='//fonts.googleapis.com/css?family=Roboto:100,300,400,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/">Product Listing</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+          <li><a href="#about"><i class="fa fa-shield"></i> About</a></li>
+          <li><a href="#contact"><i class="fa fa-comment"></i> Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <div id="main" class="container-fluid">
+    <div ng-view></div>
+    <!-- Site footer -->
+    <footer class="footer">
+      <p>&copy; 2017</p>
+    </footer>
+  </div> <!-- /container -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-cookies.js"></script>
+  <script src="../js/ui-bootstrap-tpls-2.5.0.min.js"></script>
+  <script src="../js/core.js"></script>
+</body>
+</html>

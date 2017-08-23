@@ -1,0 +1,35 @@
+<div class="row">
+  <!-- Left Sidebar -->
+  <div class="col-sm-3">
+    <div class="well sidebar">
+      <ul id="brands" class="nav nav-list">
+        <li class="nav-header">Shop by Brand</li>
+        <li><a href="#/">All</a></li>
+        <li><a href="#/brand/1">Daniel Wellington</a></li>
+        <li><a href="#/brand/2">Nudie Jeans</a></li>
+        <li><a href="#/brand/3">Furla</a></li>
+        <li><a href="#/brand/4">Karen Walker</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="col-sm-9">
+    <div class="row">
+      <div class="product-heading">Latest Products</div>
+    </div>
+    <div class="row" ng-repeat="product in products">
+      <!-- Product Listing -->
+      <div class="col-lg-12 product-item">
+        <h4 class="brand-name">{{product.brand.name}}</h4>
+        <h6>{{product.productName}}</h6>
+        <p class="description">{{product.description}}</p>
+        <a href="#/review/{{product.id}}" class="btn-add-review" ng-click="saveProdName(product.productName)">Add Review</a>
+        <div ng-if="product.review.length > 0" class="product-review">
+          <h6>Latest Review</h6>
+          <p class="review-comment">{{product.review[0].comment}}</p>
+          <p>Rating: {{product.review[0].rating}}/10</p>
+          <p>Commented by: {{product.review[0].user.userName}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
